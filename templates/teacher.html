@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Table 07</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,100,300,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="/static/https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="/static/css/style.css">
+
+	</head>
+	<body>
+		<nav class="navbar bg-dark">
+			<h1 class="form-title" style="color: white;">Teachers Panel</h1>
+			<div class="btn-group" role="group" aria-label="Basic example"></div>
+            <a href="/te" class="btn btn-success">Teacher Update</a>
+            <a href="#" class="btn btn-danger">Logout</a>
+        </div>
+		</nav>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Student View</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="table-wrap">
+						<table class="table table-bordered table-dark table-hover">
+						  <thead>
+						    <tr>
+						      <th>ID</th>
+						      <th>Name</th>
+						      <th>Age</th>
+						      <th>Email</th>
+						      <th>Place</th>
+						      <th>Phone</th>
+						      <th>User</th>
+						      <th>Password</th>
+						      <th>Update</th>
+						    </tr>
+						  </thead>
+						  <tbody>
+							{% for i in data1 %}
+						    <tr>
+						      <td>{{i.sid}}</td>
+						      <td>{{i['Name']}}</td>
+						      <td>{{i['Age']}}</td>
+						      <td>{{i['Email']}}</td>
+						      <td>{{i['Place']}}</td>
+						      <td>{{i['Phone']}}</td>
+						      <td>{{i['User']}}</td>
+						      <td>{{i['Password']}}</td>
+						      <td><a href="/se/{{i.sid}}" class="btn btn-success">Update</a></td>
+						    </tr>
+							{% endfor %}
+						  </tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script src="/static/js/jquery.min.js"></script>
+  <script src="/static/js/popper.js"></script>
+  <script src="/static/js/bootstrap.min.js"></script>
+  <script src="/static/js/main.js"></script>
+
+	</body>
+</html>
+
